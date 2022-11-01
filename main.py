@@ -5,10 +5,10 @@ import time
 from bs4 import BeautifulSoup
 
 
-password = "sos!234%"
-username = "HerrSoer05"
+password = ""
+username = ""
 
-driver = webdriver.Chrome("F:\Dev\Webdrivers\chromedriver106.exe")
+driver = webdriver.Chrome("")
 
 driver.get("https://portal.rama-mainz.de")
 
