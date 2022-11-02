@@ -1,0 +1,606 @@
+<style media="all">
+ table.stdplan-table {
+ -webkit-print-color-adjust: exact;
+ line-height: .85em;
+ box-sizing: border-box;
+ }
+
+ table.stdplan-table th, table.stdplan-table td {
+ position: relative;
+ text-align: center;
+ padding: .45rem;
+ background: #eee;
+ width: 18.2%;
+ }
+
+ table.stdplan-table th.stdplan-stunde-head {
+ width: 9%;
+ }
+
+ table.stdplan-table span.stdplan-stunde-zeit {
+ font-weight: normal;
+ font-size: .7rem;
+ }
+
+ table.stdplan-table div.stdplan-eintrag:not(:last-child) {
+ margin-bottom: .25rem;
+ }
+
+ table.stdplan-table span.stdplan-eintrag-head {
+ font-weight: bold;
+ }
+
+ table.stdplan-table span.stdplan-eintrag-sub {
+ font-size: .7rem;
+ }
+
+ table.stdplan-table span.stdplan-aufsicht {
+ position: absolute;
+ top: -.4rem;
+ left: 4%;
+ width: 92%;
+ background: #fff;
+ display: block;
+ font-size: .6rem;
+ line-height: .8rem;
+ }
+ </style>
+
+<table class="stdplan-table stptable">
+ <thead>
+ <tr>
+ <th class="stdplan-stunde-head"><!-- Stunde --></th>
+  <th class="stdplan-tagname">Mo</th>
+  <th class="stdplan-tagname">Di</th>
+  <th class="stdplan-tagname">Mi</th>
+  <th class="stdplan-tagname">Do</th>
+  <th class="stdplan-tagname">Fr</th>
+  </tr>
+ </thead>
+  <tbody><tr>
+ <th class="stdplan-stunde-head">
+ <span class="stdplan-stunde-nummer">1.</span><br>
+ <span class="stdplan-stunde-zeit">07:55</span>
+ </th>
+  <td style="background: #bda4e8;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  bk2
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  HEL
+    ZSI
+   </span>
+ </div>
+   </td>
+  <td style="background: #f3eef4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  l1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  STV
+    013
+   </span>
+ </div>
+   </td>
+  <td style="background: #5aeef4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  E1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  GEO
+    N31
+   </span>
+ </div>
+   </td>
+  <td style="background: #eee;">
+    <span class="stdplan-empty-eintrag">-</span>
+  </td>
+  <td style="background: #96cbf4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  it1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  STV
+    N11
+   </span>
+ </div>
+   </td>
+  </tr>
+   <tr>
+ <th class="stdplan-stunde-head">
+ <span class="stdplan-stunde-nummer">2.</span><br>
+ <span class="stdplan-stunde-zeit">08:40</span>
+ </th>
+  <td style="background: #bda4e8;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  bk2
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  HEL
+    ZSI
+   </span>
+ </div>
+   </td>
+  <td style="background: #bda4e8;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  bk2
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  HEL
+    ZSII
+   </span>
+ </div>
+   </td>
+  <td style="background: #7bdde8;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  d2
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  LRN
+    013
+   </span>
+ </div>
+   </td>
+  <td style="background: #eee;">
+    <span class="stdplan-empty-eintrag">-</span>
+  </td>
+  <td style="background: #96cbf4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  it1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  STV
+    N11
+   </span>
+ </div>
+   </td>
+  </tr>
+   <tr>
+ <th class="stdplan-stunde-head">
+ <span class="stdplan-stunde-nummer">3.</span><br>
+ <span class="stdplan-stunde-zeit">09:45</span>
+ </th>
+  <td style="background: #6fd7f4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  PH1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  CAP
+    PhII
+   </span>
+ </div>
+   </td>
+  <td style="background: #5aeef4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  E1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  GEO
+    311
+   </span>
+ </div>
+   </td>
+  <td style="background: #6fd7f4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  PH1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  CAP
+    PhII
+   </span>
+ </div>
+   </td>
+  <td style="background: #ccaff4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  sp1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  KRR
+    GonII
+   </span>
+ </div>
+   </td>
+  <td style="background: #cca4f4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  SK1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  LAM
+    BibH
+   </span>
+ </div>
+   </td>
+  </tr>
+   <tr>
+ <th class="stdplan-stunde-head">
+ <span class="stdplan-stunde-nummer">4.</span><br>
+ <span class="stdplan-stunde-zeit">10:30</span>
+ </th>
+  <td style="background: #6fd7f4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  PH1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  CAP
+    PhII
+   </span>
+ </div>
+   </td>
+  <td style="background: #5aeef4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  E1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  GEO
+    311
+   </span>
+ </div>
+   </td>
+  <td style="background: #6fd7f4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  PH1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  CAP
+    PhII
+   </span>
+ </div>
+   </td>
+  <td style="background: #ccaff4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  sp1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  KRR
+    GonII
+   </span>
+ </div>
+   </td>
+  <td style="background: #cca4f4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  SK1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  LAM
+    BibH
+   </span>
+ </div>
+   </td>
+  </tr>
+   <tr>
+ <th class="stdplan-stunde-head">
+ <span class="stdplan-stunde-nummer">5.</span><br>
+ <span class="stdplan-stunde-zeit">11:35</span>
+ </th>
+  <td style="background: #d8aae8;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  ge2
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  MAI
+    012
+   </span>
+ </div>
+   </td>
+  <td style="background: #d2ccdc;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  m3
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  KLN
+    118
+   </span>
+ </div>
+   </td>
+  <td style="background: #d2ccdc;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  m3
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  KLN
+    P1
+   </span>
+ </div>
+   </td>
+  <td style="background: #5acbe2;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  eth1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  RTR
+    P1
+   </span>
+ </div>
+   </td>
+  <td style="background: #5aeef4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  E1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  GEO
+    P2
+   </span>
+ </div>
+   </td>
+  </tr>
+   <tr>
+ <th class="stdplan-stunde-head">
+ <span class="stdplan-stunde-nummer">6.</span><br>
+ <span class="stdplan-stunde-zeit">12:20</span>
+ </th>
+  <td style="background: #d8aae8;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  ge2
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  MAI
+    012
+   </span>
+ </div>
+   </td>
+  <td style="background: #eee;">
+    <span class="stdplan-empty-eintrag">-</span>
+  </td>
+  <td style="background: #d2ccdc;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  m3
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  KLN
+    P1
+   </span>
+ </div>
+   </td>
+  <td style="background: #5acbe2;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  eth1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  RTR
+    P1
+   </span>
+ </div>
+   </td>
+  <td style="background: #5aeef4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  E1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  GEO
+    P2
+   </span>
+ </div>
+   </td>
+  </tr>
+   <tr>
+ <th class="stdplan-stunde-head">
+ <span class="stdplan-stunde-nummer">7.</span><br>
+ <span class="stdplan-stunde-zeit">13:05</span>
+ </th>
+  <td style="background: #eee;">
+    <span class="stdplan-empty-eintrag">-</span>
+  </td>
+  <td style="background: #eee;">
+    <span class="stdplan-empty-eintrag">-</span>
+  </td>
+  <td style="background: #eee;">
+    <span class="stdplan-empty-eintrag">-</span>
+  </td>
+  <td style="background: #eee;">
+    <span class="stdplan-empty-eintrag">-</span>
+  </td>
+  <td style="background: #eee;">
+    <span class="stdplan-empty-eintrag">-</span>
+  </td>
+  </tr>
+   <tr>
+ <th class="stdplan-stunde-head">
+ <span class="stdplan-stunde-nummer">8.</span><br>
+ <span class="stdplan-stunde-zeit">13:50</span>
+ </th>
+  <td style="background: #eee;">
+    <span class="stdplan-empty-eintrag">-</span>
+  </td>
+  <td style="background: #7bdde8;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  d2
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  LRN
+    N14
+   </span>
+ </div>
+   </td>
+  <td style="background: #cca4f4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  SK1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  LAM
+    05
+   </span>
+ </div>
+   </td>
+  <td style="background: #eee;">
+    <span class="stdplan-empty-eintrag">-</span>
+  </td>
+  <td style="background: #6fd7f4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  PH1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  CAP
+    PhI
+   </span>
+ </div>
+   </td>
+  </tr>
+   <tr>
+ <th class="stdplan-stunde-head">
+ <span class="stdplan-stunde-nummer">9.</span><br>
+ <span class="stdplan-stunde-zeit">14:35</span>
+ </th>
+  <td style="background: #eee;">
+    <span class="stdplan-empty-eintrag">-</span>
+  </td>
+  <td style="background: #7bdde8;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  d2
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  LRN
+    N14
+   </span>
+ </div>
+   </td>
+  <td style="background: #cca4f4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  SK1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  LAM
+    05
+   </span>
+ </div>
+   </td>
+  <td style="background: #eee;">
+    <span class="stdplan-empty-eintrag">-</span>
+  </td>
+  <td style="background: #eee;">
+    <span class="stdplan-empty-eintrag">-</span>
+  </td>
+  </tr>
+   <tr>
+ <th class="stdplan-stunde-head">
+ <span class="stdplan-stunde-nummer">10.</span><br>
+ <span class="stdplan-stunde-zeit">15:30</span>
+ </th>
+  <td style="background: #eee;">
+    <span class="stdplan-empty-eintrag">-</span>
+  </td>
+  <td style="background: #96cbf4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  it1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  STV
+    201
+   </span>
+ </div>
+   </td>
+  <td style="background: #eee;">
+    <span class="stdplan-empty-eintrag">-</span>
+  </td>
+  <td style="background: #f3eef4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  l1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  STV
+    112
+   </span>
+ </div>
+   </td>
+  <td style="background: #eee;">
+    <span class="stdplan-empty-eintrag">-</span>
+  </td>
+  </tr>
+   <tr>
+ <th class="stdplan-stunde-head">
+ <span class="stdplan-stunde-nummer">11.</span><br>
+ <span class="stdplan-stunde-zeit">16:15</span>
+ </th>
+  <td style="background: #eee;">
+    <span class="stdplan-empty-eintrag">-</span>
+  </td>
+  <td style="background: #eee;">
+    <span class="stdplan-empty-eintrag">-</span>
+  </td>
+  <td style="background: #eee;">
+    <span class="stdplan-empty-eintrag">-</span>
+  </td>
+  <td style="background: #f3eef4;">
+   <div class="stdplan-eintrag">
+ <span class="stdplan-eintrag-head">
+  l1
+ </span>
+ <br>
+ <span class="stdplan-eintrag-sub">
+  STV
+    112
+   </span>
+ </div>
+   </td>
+  <td style="background: #eee;">
+    <span class="stdplan-empty-eintrag">-</span>
+  </td>
+  </tr>
+  </tbody></table>
