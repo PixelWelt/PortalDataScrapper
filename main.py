@@ -2,13 +2,12 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
-from bs4 import BeautifulSoup
+import creds
 
+password = creds.password
+username = creds.username
 
-password = ""
-username = ""
-
-driver = webdriver.Chrome("")
+driver = webdriver.Chrome(creds.webdriverPath)
 
 driver.get("https://portal.rama-mainz.de")
 
@@ -33,18 +32,19 @@ with open('stundenplan.html', 'w') as f:
 driver.get("https://portal.rama-mainz.de/vertretung.php")
 
 dates = driver.find_elements(By.CLASS_NAME, "tagesbutton")
-print(type(dates))
-
+print(len(dates))
 infosOfTheDays = driver.find_elements(By.CLASS_NAME, "nzts")
+if(len(dates) != 0):
+    with open('infosOfTheDay.txt', 'w') as f:
+        f.writelines(dates[0].text + "\n")
+        f.write(infosOfTheDays[0].text)
 
-with open('infosOfTheDay.txt', 'w') as f:
-    f.writelines(dates[0].text + "\n")
-    f.write(infosOfTheDays[0].text)
 
-dates[1].click()
-with open('infosOfTomorrow.txt', 'w') as f:
-    f.writelines(dates[1].text + "\n")
-    f.write(infosOfTheDays[1].text)
+    dates[1].click()
+    with open('infosOfTomorrow.txt', 'w') as f:
+        f.writelines(dates[1].text + "\n")
+        f.write(infosOfTheDays[1].text)
 
 driver.quit()
 
+ 
