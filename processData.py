@@ -2,7 +2,7 @@ import datetime
 import creds
 
 def convertDate(line):
-    date = line.split(" ")[1]
+    date = line.split(" ")[2]
     date = date.strip("\n")
     date = datetime.datetime.strptime(date, "%d.%m.%Y").strftime("%Y-%m-%d")
     print(date)
