@@ -2,7 +2,6 @@ import datetime
 import creds
 #import mysql.connector
 #from mysql.connector import Error
-
 def convertDate(line):
     date = line.split(" ")[2]
     date = date.strip("\n")
@@ -22,7 +21,7 @@ def convertTeachers(line):
             indexOfTeacher = teacherList.index(teacher)
             teacher = teacher.split("(")[1]
             teacher = teacher.replace(")", "")
-            score = (eval(teacher) * -0.1 ) + 0.1
+            score = round(eval(teacher) * -0.1  + 0.1,2)
             teacherScore.append(score)
             teacherList[indexOfTeacher] = teacherList[indexOfTeacher].replace("(" + str(teacher) + ")", "")
         else:
