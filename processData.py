@@ -1,5 +1,7 @@
 import datetime
 import creds
+#import mysql.connector
+#from mysql.connector import Error
 
 def convertDate(line):
     date = line.split(" ")[2]
@@ -11,9 +13,10 @@ def convertDate(line):
 def convertTeachers(line):
     teacherScore = list()
     line = line.replace("\n", "")
-    line = line.replace(",", "")
-    itemList = line.split(" ")
-    teacherList = itemList[2:]
+    line = line.replace("Abwesende Lehrer", " ")
+    line = line.replace(" ", "")
+    itemList = line.split(",")
+    teacherList = itemList
     for teacher in teacherList:
         if teacher.find("(") != -1:
             indexOfTeacher = teacherList.index(teacher)
@@ -30,7 +33,26 @@ def convertTeachers(line):
 def pushIntoDatabase(date, teacherList, teacherScore):
     print()
     #TODO: add server connection
+    try:
+        connection = mysql.connector.connect(host=creds.host,
+                                         database=creds.database,
+                                         user=creds.dbUser,
+                                         password=creds.dbPassword)
+        cursor = connection.cursor()
+        
+        sqlDateQuery = "SELECT FROM * WHERE date = " + date
+        
+        cursor.execute(sqlDateQuery)
+        record = cursor.fetchall()
 
+    
+    except Error as e:
+        print(e)
+    finally:
+        if connection.is_connected():
+            cursor.close()
+            connection.close()
+            print("MySQL connection is closed")
 
 line = ""
 with open("infosOfTheDay.txt") as f:
