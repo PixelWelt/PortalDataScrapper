@@ -1,7 +1,6 @@
 import datetime
 import creds
-#import mysql.connector
-#from mysql.connector import Error
+import mysql.connector as mysql
 def convertDate(line):
     date = line.split(" ")[2]
     date = date.strip("\n")
@@ -29,29 +28,24 @@ def convertTeachers(line):
     print(line)
     return teacherList, teacherScore
 
-def pushIntoDatabase(date, teacherList, teacherScore):
-    print()
+def pushIntoDatabase():
+    print("test")
     #TODO: add server connection
     try:
-        connection = mysql.connector.connect(host=creds.host,
-                                         database=creds.database,
-                                         user=creds.dbUser,
-                                         password=creds.dbPassword)
+        connection = mysql.connect(host=creds.host,
+                                    database=creds.database,
+                                    user=creds.dbUser,
+                                    password=creds.dbPassword)
         cursor = connection.cursor()
         
-        sqlDateQuery = "SELECT FROM * WHERE date = " + date
-        
-        cursor.execute(sqlDateQuery)
-        record = cursor.fetchall()
+        #sqlDateQuery = "SELECT * FROM `sickScore`"
 
-    
-    except Error as e:
-        print(e)
-    finally:
-        if connection.is_connected():
-            cursor.close()
-            connection.close()
-            print("MySQL connection is closed")
+        #cursor.execute(sqlDateQuery)
+        #record = cursor.fetchall()
+        print("Connected to:", connection.get_server_info())
+    except mysql.Error as e:
+        print(f"Error connecting to MariaDB Platform: {e}")
+
 
 line = ""
 with open("infosOfTheDay.txt") as f:
@@ -71,3 +65,4 @@ with open("infosOfTomorrow.txt") as f:
         teacherList, teacherScore = convertTeachers(line)
 print(teacherList, teacherScore)
 
+pushIntoDatabase()
